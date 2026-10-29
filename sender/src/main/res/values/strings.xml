@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AudioBridge Gönderici</string>
+    <string name="subtitle">TV\'nin sistem sesini Wi-Fi üzerinden telefonuna gönderir. Bulut yok, hesap yok.</string>
+
+    <string name="idle">Beklemede</string>
+    <string name="receiver_address_label">Alıcı adresi (IP veya ana bilgisayar, isteğe bağlı :port)</string>
+    <string name="receiver_address_hint">192.168.1.42</string>
+    <string name="start">Yayını başlat</string>
+    <string name="stop">Durdur</string>
+    <string name="scan_receivers">Alıcı ara</string>
+    <string name="stop_scan">Aramayı durdur</string>
+    <string name="no_receivers_yet">Henüz alıcı bulunamadı. Telefonda alıcı uygulamasını başlatıp tekrar arayın. Yönlendiriciniz mDNS\'i engelliyorsa telefonun IP adresini elle yazın.</string>
+    <string name="mono_option">Mono (bant genişliğini yarıya indirir, gecikme aynı)</string>
+    <string name="latency_option">Gecikme testi: saniyede bir tık sesi</string>
+    <string name="receiver_entry">%1$s:%2$d</string>
+
+    <!-- durum / ayrıntı -->
+    <string name="status_waiting_permission">Ekran yakalama izni bekleniyor…</string>
+    <string name="status_requesting_permission">Ekran yakalama izni isteniyor…</string>
+    <string name="status_stopped">Durduruldu</string>
+    <string name="status_streaming">%1$s adresine yayın yapılıyor</string>
+    <string name="status_no_target">Alıcı IP adresini girin veya alıcı arayın</string>
+    <string name="status_mic_required">TV sesini yakalamak için mikrofon izni gerekli</string>
+    <string name="status_capture_denied">Ekran yakalama izni verilmedi</string>
+    <string name="status_receiver_selected">Alıcı seçildi</string>
+    <string name="status_scan_stopped">Arama durduruldu</string>
+    <string name="status_searching">Alıcılar aranıyor…</string>
+    <string name="status_search_stopped">Arama durdu</string>
+    <string name="status_discovery_failed">Arama başarısız (hata %1$d)</string>
+    <string name="status_discovery_error">Arama hatası: %1$s</string>
+    <string name="status_found_receiver">%1$s bulundu: %2$s</string>
+
+    <string name="mode_latency_test">gecikme testi</string>
+    <string name="mode_mono">mono</string>
+    <string name="mode_stereo">stereo</string>
+    <string name="detail_streaming">%1$s • %2$d kHz • 10 ms kareler</string>
+    <string name="detail_traffic">%1$d paket/sn • %2$d kbit/sn</string>
+    <string name="detail_send_errors"> • %1$d gönderim hatası</string>
+    <string name="detail_latency_suffix"> • gecikme testi modu</string>
+    <string name="detail_mono_suffix"> • mono</string>
+
+    <string name="hint_silence">10 saniyedir ses yakalanamıyor. DRM korumalı uygulamalar (Netflix, Disney+, Prime Video) ses yakalamayı engeller ve sessiz kalır. YouTube veya başka bir uygulama deneyin; TV sesinin kapalı olmadığından emin olun.</string>
+    <string name="hint_latency_test">Gecikme testi: saniyede bir tık sesi hem TV\'den hem işitme cihazlarından duyulur. Aradaki fark, gerçek uçtan uca gecikmedir.</string>
+
+    <!-- bildirimler -->
+    <string name="notif_title">AudioBridge Gönderici</string>
+    <string name="notif_waiting">Ekran yakalama izni bekleniyor…</string>
+    <string name="notif_starting">Başlatılıyor…</string>
+    <string name="notif_start_capture">Ses yakalama başlatılıyor…</string>
+    <string name="notif_streaming">%1$s adresine yayın (%2$s)</string>
+    <string name="notif_silent">Sessiz yakalama — DRM uygulaması?</string>
+    <string name="notif_stop">Durdur</string>
+    <string name="channel_name">Ses yayını</string>
+    <string name="channel_description">TV sesinin telefona gönderildiğini gösterir</string>
+
+    <!-- hatalar -->
+    <string name="error_invalid_address">Geçersiz alıcı adresi \"%1$s\". 192.168.1.42 gibi bir IP girin</string>
+    <string name="error_cannot_reach">%1$s:%2$d adresine ulaşılamıyor — %3$s</string>
+    <string name="error_projection_rejected">Sistem MediaProjection isteğini reddetti (%1$s). Şunu deneyin: %2$s</string>
+    <string name="error_projection_null">MediaProjection oluşturulamadı. TV kutusu ses yakalamayı desteklemiyor olabilir.</string>
+    <string name="error_service_type">Android ses yakalama servisini reddetti. Yakalama iznini adb ile bir kez verin: %1$s</string>
+    <string name="error_fgs_refused">Sistem yayın servisinin başlamasına izin vermedi. Uygulamayı öne getirin (ekran açık olsun) ve tekrar Başlat\'a basın.</string>
+    <string name="error_missing_permission_data">Ekran yakalama izni verisi eksik. Başlatmayı tekrar deneyin.</string>
+    <string name="error_cannot_start_service">Yayın servisi başlatılamıyor: %1$s</string>
+    <string name="error_capture_start">Ses yakalama başlatılamadı (logcat: AudioBridgeCapture)</string>
+    <string name="error_capture_generic">Ses yakalama hatası: %1$s</string>
+    <string name="error_capture_stopped">Yakalama sistem tarafından durduruldu</string>
+    <string name="error_click_track">Tık sesi hatası: %1$s</string>
+
+    <string name="footer_help">TV kutusu yakalama izni iletişim kutusunu hiç göstermiyorsa adb üzerinden bir kez izin verin:\n\nadb shell appops set %1$s PROJECT_MEDIA allow\n\nDRM uygulamaları (Netflix, Disney+, Prime Video) ses yakalamayı engeller ve sessiz yayın gönderir. YouTube ve çoğu uygulama çalışır.</string>
+    <string name="adb_hint">USB ile veya Wi-Fi üzerinden adb ile bağlanıp şunu çalıştırın:\n\nadb shell appops set %1$s PROJECT_MEDIA allow\n\nSonra “Tekrar dene”ye basın.</string>
+
+    <string name="capture_unavailable_title">Yakalama izni ekranı yok</string>
+    <string name="capture_unavailable_message">Bu TV kutusu, MediaProjection\'ın ihtiyaç duyduğu ekran yakalama izni ekranını sunmuyor. Genel çözüm, PROJECT_MEDIA uygulama iznini adb üzerinden vermektir.</string>
+
+    <string name="capture_denied_title">Yakalama izni verilmedi</string>
+    <string name="capture_denied_message">TV kutusu ses yakalamaya izin vermedi. Bazı kutularda iletişim kutusunun çalışması için PROJECT_MEDIA izninin adb ile verilmesi gerekir.</string>
+
+    <string name="try_again">Tekrar dene</string>
+    <string name="close">Kapat</string>
+</resources>

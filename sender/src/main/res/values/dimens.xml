@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tv_padding">40dp</dimen>
+    <dimen name="gap_small">8dp</dimen>
+    <dimen name="gap_medium">14dp</dimen>
+    <dimen name="gap_large">26dp</dimen>
+</resources>

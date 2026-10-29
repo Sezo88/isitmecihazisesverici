@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AudioBridge Sender</string>
+    <string name="subtitle">Sends this TV\'s system audio to your phone over Wi-Fi. No cloud, no accounts.</string>
+
+    <string name="idle">Idle</string>
+    <string name="receiver_address_label">Receiver address (IP or host, optional :port)</string>
+    <string name="receiver_address_hint">192.168.1.42</string>
+    <string name="start">Start streaming</string>
+    <string name="stop">Stop</string>
+    <string name="scan_receivers">Scan for receivers</string>
+    <string name="stop_scan">Stop scan</string>
+    <string name="no_receivers_yet">No receivers found yet. Start the receiver app on the phone, then scan. If mDNS is blocked on your router, type the phone\'s IP address instead.</string>
+    <string name="mono_option">Mono (halves bandwidth, same latency)</string>
+    <string name="latency_option">Latency test: click once per second</string>
+    <string name="receiver_entry">%1$s:%2$d</string>
+
+    <!-- status / detail -->
+    <string name="status_waiting_permission">Waiting for the screen-capture permission…</string>
+    <string name="status_requesting_permission">Requesting screen-capture permission…</string>
+    <string name="status_stopped">Stopped</string>
+    <string name="status_streaming">Streaming to %1$s</string>
+    <string name="status_no_target">Enter the receiver IP address or scan for receivers</string>
+    <string name="status_mic_required">Microphone permission is required to capture TV audio</string>
+    <string name="status_capture_denied">Screen-capture permission was not granted</string>
+    <string name="status_receiver_selected">Receiver selected</string>
+    <string name="status_scan_stopped">Scan stopped</string>
+    <string name="status_searching">Searching for receivers…</string>
+    <string name="status_search_stopped">Search stopped</string>
+    <string name="status_discovery_failed">Discovery failed (error %1$d)</string>
+    <string name="status_discovery_error">Discovery error: %1$s</string>
+    <string name="status_found_receiver">Found %1$s at %2$s</string>
+
+    <string name="mode_latency_test">latency test</string>
+    <string name="mode_mono">mono</string>
+    <string name="mode_stereo">stereo</string>
+    <string name="detail_streaming">%1$s • %2$d kHz • 10 ms frames</string>
+    <string name="detail_traffic">%1$d pkt/s • %2$d kbit/s</string>
+    <string name="detail_send_errors"> • %1$d send errors</string>
+    <string name="detail_latency_suffix"> • latency test mode</string>
+    <string name="detail_mono_suffix"> • mono</string>
+
+    <string name="hint_silence">No audio captured for 10 s. DRM-protected apps (Netflix, Disney+, Prime Video) block audio capture and will stay silent. Try YouTube or another app, and make sure the TV volume is not muted.</string>
+    <string name="hint_latency_test">Latency test: a click plays on the TV and in the hearing aids once per second. The gap is the real end-to-end latency.</string>
+
+    <!-- notifications -->
+    <string name="notif_title">AudioBridge Sender</string>
+    <string name="notif_waiting">Waiting for the screen-capture permission…</string>
+    <string name="notif_starting">Starting…</string>
+    <string name="notif_start_capture">Starting audio capture…</string>
+    <string name="notif_streaming">Streaming to %1$s (%2$s)</string>
+    <string name="notif_silent">Silent capture — DRM app?</string>
+    <string name="notif_stop">Stop</string>
+    <string name="channel_name">Audio streaming</string>
+    <string name="channel_description">Shows that TV audio is being streamed to the phone</string>
+
+    <!-- errors -->
+    <string name="error_invalid_address">Invalid receiver address \"%1$s\". Enter an IP like 192.168.1.42</string>
+    <string name="error_cannot_reach">Cannot reach %1$s:%2$d — %3$s</string>
+    <string name="error_projection_rejected">The system rejected MediaProjection (%1$s). Try: %2$s</string>
+    <string name="error_projection_null">MediaProjection could not be created. The TV box may not support audio capture.</string>
+    <string name="error_service_type">Android refused the audio-capture service. Allow the capture permission once over adb: %1$s</string>
+    <string name="error_fgs_refused">The system did not allow the streaming service to start. Bring this app to the front (screen on) and press Start again.</string>
+    <string name="error_missing_permission_data">Screen-capture permission data is missing. Try starting again.</string>
+    <string name="error_cannot_start_service">Cannot start the streaming service: %1$s</string>
+    <string name="error_capture_start">Audio capture could not start (see logcat tag AudioBridgeCapture)</string>
+    <string name="error_capture_generic">Audio capture error: %1$s</string>
+    <string name="error_capture_stopped">Capture was stopped by the system</string>
+    <string name="error_click_track">Click track error: %1$s</string>
+
+    <string name="footer_help">If the TV box never shows the capture permission dialog, allow it once over adb:\n\nadb shell appops set %1$s PROJECT_MEDIA allow\n\nDRM apps (Netflix, Disney+, Prime Video) block audio capture and will stream silence. YouTube and most other apps work.</string>
+    <string name="adb_hint">Connect with USB or adb over Wi-Fi and run:\n\nadb shell appops set %1$s PROJECT_MEDIA allow\n\nThen press “Try again”.</string>
+
+    <string name="capture_unavailable_title">Capture permission dialog is missing</string>
+    <string name="capture_unavailable_message">This TV box does not provide the screen-capture permission screen that MediaProjection needs. The usual fix is to allow the PROJECT_MEDIA app-op over adb.</string>
+
+    <string name="capture_denied_title">Capture permission denied</string>
+    <string name="capture_denied_message">The TV box did not grant audio capture. Some boxes need the PROJECT_MEDIA app-op allowed over adb before the dialog works.</string>
+
+    <string name="try_again">Try again</string>
+    <string name="close">Close</string>
+</resources>

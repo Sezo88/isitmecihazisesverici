@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AudioBridge Alıcı</string>
+    <string name="subtitle">TV sesi, kendi Wi-Fi ağınız üzerinden işitme cihazlarınızda.</string>
+
+    <string name="idle">Beklemede</string>
+    <string name="idle_detail">Dinle\'ye basın ve TV\'de bir şey oynatın.</string>
+    <string name="start_listening">Dinle</string>
+    <string name="stop_listening">Durdur</string>
+
+    <string name="buffer_default">Tampon: 150 ms</string>
+    <string name="buffer_value">Tampon: %1$d ms</string>
+    <string name="buffer_min">20 ms — en düşük gecikme</string>
+    <string name="buffer_max">500 ms — en kararlı</string>
+    <string name="buffer_help">Büyük tampon daha kötü Wi-Fi\'ye dayanır; küçük tampon daha senkron hissettirir. Paketler kaybolmaya başladığında tampon kendini otomatik büyütür.</string>
+
+    <string name="keep_screen_on">Dinlerken ekran açık kalsın</string>
+
+    <string name="this_phone">Bu telefon: %1$s:%2$d</string>
+    <string name="sender_address">Gönderici: %1$s</string>
+
+    <string name="stats_buffer">tampon %1$d ms  (hedef %2$d ms, jitter %3$d ms)</string>
+    <string name="stats_loss">kayıp %1$.1f %%  •  %2$d telafi edilen kare</string>
+    <string name="stats_received">%1$d kare alındı, %2$d kayıp</string>
+
+    <string name="hint_body">TV bekleniyor. TV\'de: AudioBridge Gönderici uygulamasını açın, alıcı listesinden bu telefonu seçin (veya yukarıdaki IP\'yi yazın) ve Yayını başlat\'a basın.</string>
+
+    <!-- durumlar / ayrıntılar -->
+    <string name="phase_starting">Başlatılıyor…</string>
+    <string name="phase_listening">Dinleniyor</string>
+    <string name="phase_playing">Çalınıyor</string>
+    <string name="phase_error">Hata</string>
+    <string name="detail_waiting">Gönderici bekleniyor…</string>
+    <string name="detail_smooth">Akış sorunsuz</string>
+    <string name="detail_lossy">Akışta paket kaybı var</string>
+    <string name="detail_stopped">Durduruldu</string>
+    <string name="detail_announced">Yerel ağda %1$s adıyla duyuruluyor</string>
+    <string name="detail_manual_ip">%1$s — TV şu adresi kullanabilir: %2$s:%3$d</string>
+    <string name="audio_low_latency">düşük gecikmeli AudioTrack (%1$d ms tampon)</string>
+    <string name="audio_normal">AudioTrack (%1$d ms tampon)</string>
+
+    <!-- bildirimler -->
+    <string name="notif_title">AudioBridge Alıcı</string>
+    <string name="notif_starting">Ses çıkışı başlatılıyor…</string>
+    <string name="notif_listening">%1$s üzerinden dinleniyor</string>
+    <string name="notif_stop">Durdur</string>
+    <string name="channel_name">Oynatma</string>
+    <string name="channel_description">TV sesinin çalındığını gösterir</string>
+
+    <!-- hatalar -->
+    <string name="error_audio_start">Ses oynatma başlatılamadı: %1$s</string>
+    <string name="error_bind">UDP portu %1$d bağlanamadı. Başka bir uygulama kullanıyor olabilir.</string>
+    <string name="error_fgs_refused">Sistem oynatmanın başlamasına izin vermedi. Uygulamayı açın (ekran açık olsun) ve tekrar Dinle\'ye basın.</string>
+    <string name="error_cannot_start_service">Ses servisi başlatılamıyor: %1$s</string>
+    <string name="error_mdns_failed">mDNS kaydı başarısız (hata %1$d) — IP\'yi elle girin</string>
+    <string name="error_mdns_error">mDNS kayıt hatası: %1$s</string>
+
+    <string name="footer_help">Ses yalnızca yerel ağınızda UDP üzerinden ham PCM olarak gönderilir — bulut yok, hesap yok, analiz yok. Oynatma normal medya yönlendirmesini kullanır; yani ses Android\'in medyayı gönderdiği yere gider: eşleşmiş işitme cihazlarınız, Bluetooth kulaklığınız veya telefon hoparlörü.\n\nTelefon ve TV kutusu aynı Wi-Fi ağında olmalı. Daha düşük gecikme ve daha az paket kaybı için 2,4 GHz yerine 5 GHz tercih edin.</string>
+</resources>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AudioBridge Receiver</string>
+    <string name="subtitle">TV sound on your hearing aids, over your own Wi-Fi.</string>
+
+    <string name="idle">Idle</string>
+    <string name="idle_detail">Press Listen and play something on the TV.</string>
+    <string name="start_listening">Listen</string>
+    <string name="stop_listening">Stop</string>
+
+    <string name="buffer_default">Buffer: 150 ms</string>
+    <string name="buffer_value">Buffer: %1$d ms</string>
+    <string name="buffer_min">20 ms — lowest latency</string>
+    <string name="buffer_max">500 ms — most stable</string>
+    <string name="buffer_help">Larger buffer survives worse Wi-Fi; smaller buffer feels more in sync. The buffer adapts by itself when packets start to get lost.</string>
+
+    <string name="keep_screen_on">Keep the screen on while listening</string>
+
+    <string name="this_phone">This phone: %1$s:%2$d</string>
+    <string name="sender_address">Sender: %1$s</string>
+
+    <string name="stats_buffer">buffer %1$d ms  (target %2$d ms, jitter %3$d ms)</string>
+    <string name="stats_loss">loss %1$.1f %%  •  %2$d concealed frames</string>
+    <string name="stats_received">%1$d frames received, %2$d lost</string>
+
+    <string name="hint_body">Waiting for the TV. On the TV: open AudioBridge Sender, pick this phone in the receiver list (or type the IP shown above) and press Start streaming.</string>
+
+    <!-- phases / details -->
+    <string name="phase_starting">Starting…</string>
+    <string name="phase_listening">Listening</string>
+    <string name="phase_playing">Playing</string>
+    <string name="phase_error">Error</string>
+    <string name="detail_waiting">Waiting for the sender…</string>
+    <string name="detail_smooth">Streaming smoothly</string>
+    <string name="detail_lossy">Streaming with packet loss</string>
+    <string name="detail_stopped">Stopped</string>
+    <string name="detail_announced">Announced as %1$s on the local network</string>
+    <string name="detail_manual_ip">%1$s — the TV can use %2$s:%3$d</string>
+    <string name="audio_low_latency">low-latency AudioTrack (%1$d ms buffer)</string>
+    <string name="audio_normal">AudioTrack (%1$d ms buffer)</string>
+
+    <!-- notifications -->
+    <string name="notif_title">AudioBridge Receiver</string>
+    <string name="notif_starting">Starting audio output…</string>
+    <string name="notif_listening">Listening on %1$s</string>
+    <string name="notif_stop">Stop</string>
+    <string name="channel_name">Playback</string>
+    <string name="channel_description">Shows that TV audio is playing</string>
+
+    <!-- errors -->
+    <string name="error_audio_start">Audio playback could not start: %1$s</string>
+    <string name="error_bind">Could not bind UDP port %1$d. Is another app using it?</string>
+    <string name="error_fgs_refused">The system did not allow playback to start. Open the app (screen on) and press Listen again.</string>
+    <string name="error_cannot_start_service">Cannot start the audio service: %1$s</string>
+    <string name="error_mdns_failed">mDNS registration failed (error %1$d) — use manual IP entry</string>
+    <string name="error_mdns_error">mDNS registration error: %1$s</string>
+
+    <string name="footer_help">Audio is sent as raw PCM over UDP on your local network only — no cloud, no accounts, no analytics. Playback uses normal media routing, so the audio goes wherever Android sends media: your paired hearing aids, Bluetooth headphones or the phone speaker.\n\nKeep the phone and the TV box on the same Wi-Fi network. 5 GHz is preferable to 2.4 GHz for lower latency and less packet loss.</string>
+</resources>

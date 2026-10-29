@@ -1,0 +1,16 @@
+*.iml
+.gradle/
+build/
+local.properties
+.idea/
+.DS_Store
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.ap_
+
+# Ship the built APKs in dist/ so they can be downloaded from GitHub
+!dist/*.apk
+artifacts/
+build-log.txt
